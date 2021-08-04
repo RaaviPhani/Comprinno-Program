@@ -1,0 +1,12 @@
+bool answer = true
+#Iterate i from i to N
+for i=1 to N do:
+#If string i position contains cookie then check the i+1 position is milk or not
+   if (s[i] == "cookie" ) then 
+       if(i==N or  s[i+1]!== "milk") then
+         answer = false
+ #print yes if milk presents
+if(answer)then
+   print("YES")
+else
+   print("NO")
