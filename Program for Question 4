@@ -1,12 +1,19 @@
-bool answer = true
-#Iterate i from i to N
-for i=1 to N do:
-#If string i position contains cookie then check the i+1 position is milk or not
-   if (s[i] == "cookie" ) then 
-       if(i==N or  s[i+1]!== "milk") then
-         answer = false
- #print yes if milk presents
-if(answer)then
-   print("YES")
-else
-   print("NO")
+#input the testcases
+test_case=int(input())
+#Iterating to the number of testcases
+for i in range(test_case):
+#input into n
+    n=int(input())
+#splitting the input
+    lst_val=input().split(" ")
+    cookie_count=lst_val.count('cookie')
+#initializing count
+    count=0
+#iterating to n-1 
+    for j in range(n-1):
+ #condition checking
+        if lst_val[j]=='cookie' and lst_val[j+1]=='milk':
+ #count increment
+            count+=1
+ #checking condition if true yes will print else no will print 
+    print('YES' if count == cookie_count else 'NO')
