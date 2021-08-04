@@ -1,0 +1,55 @@
+#input integer to S
+S=int(input())
+#condition checking
+if(1<=S<=100):
+#iterating the loop upto S
+    for i in range(S):
+ #Accepting the input upto S
+        N=int(input())
+        #condition checking
+        if(3<=N<=100):
+        #initializing array list
+            l1=[]
+            #splitting the values
+            l1=list(map(int,input().split()))
+            #condition checking
+            if(len(l1)==N):
+            #initializing f to 0
+                f=0
+              #iterating the loop upto l1
+                for i in l1:
+                #condition checking
+                    if i<1 or i>100:
+                        f=1
+                        break
+                #condition checking if true go to inner if ,if false else block executes
+                if f==0:
+                 #condition checking if true go to inner if ,if false else block executes
+                    if N%2!=0:
+                     #condition checking if true go to inner if ,if false else block executes
+                        if l1[0]==1 and l1[-1]==1:
+                        #condition checking if true go to inner if ,if false else block executes
+                            if (N//2)+1==l1[N//2]:
+                            #condition checking if true go to inner if ,if false else block executes
+                                if l1[1]-l1[0]==1:
+                                #condition checking if true go to inner if ,if false else block executes
+                                    l3=[i for i in range(1,N//2+2)]+[i for i in range(N//2,0,-1)]
+                                    if l3==l1:
+                                        print('yes')
+                                    else:
+                                        print('no')
+                                else:
+                                    print('no')
+                            else:
+                                print('no')
+                        else:
+                            print('no')
+
+                    else:
+                        print('no')
+                else:
+                    print('no')
+            else:
+                print('no')
+        else:
+            print('no')
