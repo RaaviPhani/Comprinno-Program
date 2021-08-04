@@ -1,0 +1,29 @@
+#input for no.of testcases
+for i in range(int(input())):
+#input for number
+    n=int(input())
+#initializing array
+    b=[]
+#splitting the input and allocate to list
+    c=list(map(int,input().split()))[:n]
+#getting unique numbers
+    d=list(set(c))
+#sorting to descending order
+    d.sort(reverse=True)
+#Iterating the numbers from d taking single as j
+    for j in d:
+#checking the count of j if greater than or equal to 2 append
+      if c.count(j)>=2:
+        b.append(j)
+#if greater than or equal to 4 append j
+      if c.count(j)>=4:
+        b.append(j)
+        b.append(j)
+#checking length of b if greater than 1 then muitiply with position of 0 with 1
+     if len(b)>1:
+        print(b[0]*b[1])
+#if condition false then else executes by printing -1
+     else:
+        print(-1)
+        
+        
