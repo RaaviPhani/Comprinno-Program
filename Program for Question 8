@@ -1,0 +1,10 @@
+#import math
+#input no.of testcases
+for i in range(int(input())):
+#splitting the input
+    a,b,n=map(int,input().split())
+#condition checking
+    if n%2==0:
+        print(max(a,b)//min(a,b))
+    else:
+        print(max(2*a,b)//min(2*a,b))
