@@ -1,0 +1,36 @@
+#Taking t as int value which is for no.of testcases
+t=int(input())
+#while executes until no.of test cases completed
+while(t>0):
+#s it takes input as string 
+  s=input()
+#a[] used to store all characters in a string seperately
+  a=[]
+#for is used for each character reading in a string
+  for i in s:
+#appending each element in the string to array
+     a.append(i)
+#getting distinct characters in the string and forming an array
+  b=list(set(a))
+#if the unique character is less than 3 it prints dynamic
+  if(len(b)<3):
+     print("Dynamic")
+#if we have more than 3 else will be executed
+  else:
+#creating empty array
+    c=[]
+# for loop for getting count of unique characters
+    for i in b:
+#appending the count if unique characters
+       c.append(a.count(i))
+#sort the count in descending order
+    c.sort(reverse=True)
+#checks the given condition
+    if((c[0]-1)+(c[0]-2)>=3):
+#if true prints Dynamic
+        print("Dynamic")
+#if condition fails else will be executed prints not
+    else:
+       print("Not")
+#it decreases the test cases
+  t-=1
