@@ -1,0 +1,30 @@
+#input testcases and iterating loop
+for i in range(int(input())):
+#accepting input upto for condition true
+    n = int(input())
+#splitting the input and assigning to arr
+    arr = list(map(int, input().split()))
+    #initializing count
+    count =0
+    for i in arr:
+    #condition checking
+        if i >= 2 or i <= -2:
+        #increment count
+            count += 1
+   #condition checking
+    if count > 2:
+        print("no")
+    else:
+    #taking distinct values
+        s = list(set(arr))
+        ans = True
+        for i in range(len(s)):
+            for j in range(i+1,len(s)):
+                if s[i]*s[j] not in s:
+                    ans = False
+        
+    #condition checking
+        if ans:
+            print("yes")
+        else:
+            print("no")
