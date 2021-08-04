@@ -1,0 +1,12 @@
+#input for number of testcases
+n=int(input())
+#checking the condition
+for i in range(n):
+#Accepting input into base
+   base=int(input())
+#checking the base value with condition if true if block executes
+   if(base<1500):
+        print(base+base*0.1+base*0.9)
+#if condition false else will execute
+    else:
+        print(base+500+base*0.98)
