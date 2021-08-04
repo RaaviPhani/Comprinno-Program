@@ -1,0 +1,8 @@
+#input for no.of testcases
+for i in range(int(input())):
+#accepting the input upto testcases 
+    n = int(input())
+#splitting the input
+    a = list(map(int,input().split()))
+#multiply min of a with n-1
+    print(min(a)*(n-1))
