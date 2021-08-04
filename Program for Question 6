@@ -1,0 +1,12 @@
+#input the test cases
+for i in range(int(input())):
+#splitting the input
+    cats,dogs,legs=map(int,input().split(' '))
+#storing the max of dogs,cats-dogs in temp
+    temp = max(dogs,cats-dogs)
+#checking the condition if true if block executes
+    if legs<=(cats+dogs)*4 and legs>=4*temp and legs%4==0:
+        print("yes")
+ #if condition false else block executes
+    else:
+        print("no")
