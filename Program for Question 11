@@ -1,0 +1,13 @@
+#Input of testcases
+for i in range(int(input())):
+#string input taking into a
+  a=input()
+#checking conditions
+   if a=="b" or a=="B":
+      print("Battleship")
+   elif a=="c" or a=="C":
+      print("Cruiser")
+   elif a=="d" or a=="D":
+      print("Destroyer")
+   else:
+      print("Frigate")
